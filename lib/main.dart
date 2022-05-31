@@ -30,12 +30,14 @@ class Cargo extends StatelessWidget {
         designSize: const Size(375, 855),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: (_) {
+        builder: (context, child) {
           return MaterialApp(
             theme: AppTheme.themeData,
             debugShowCheckedModeBanner: false,
             home: SplashPage(),
           );
-        });
+        },
+        child: const SplashPage(),
+        );
   }
 }
